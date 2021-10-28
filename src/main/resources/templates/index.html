@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <a th:href="@{/users/export/pdf}">Export to PDF</a>
+</fieldset>
+    <br>
+<fieldset>
+    <form th:action="@{/}" method="post">
+        <label>
+            E-mail
+            <input type="text" name="email">
+        </label>
+        <label>
+            Nome Completo
+            <input type="text" name="fullName">
+        </label>
+        <input type="submit" title="Enviar">
+    </form>
+</fieldset>
+</body>
+</html>
