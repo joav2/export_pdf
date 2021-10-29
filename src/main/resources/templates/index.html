@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .format {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .format-pdfview {
+            height: 500px;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
-<fieldset>
+<fieldset class="format">
     <a th:href="@{/users/export/pdf}">Export to PDF</a>
 </fieldset>
-    <br>
-<fieldset>
+<br>
+<fieldset class="format">
     <form th:action="@{/}" method="post">
         <label>
             E-mail
@@ -21,6 +33,11 @@
         </label>
         <input type="submit" title="Enviar">
     </form>
+</fieldset>
+<br>
+<fieldset class="format">
+    <iframe class="format-pdfview" allowfullscreen th:src="@{/load}">
+    </iframe>
 </fieldset>
 </body>
 </html>
